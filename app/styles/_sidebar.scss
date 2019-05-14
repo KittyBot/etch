@@ -1,0 +1,71 @@
+.nav {
+  h1 {
+    color: $warning;
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+}
+
+.button {
+  margin: .5rem;
+}
+
+.content-backdrop {
+  background: none;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  background: $warning;
+}
+
+.side-menu-toggle {
+  color: $success;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.side-menu-nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding: 1rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &__divider {
+    flex-grow: 1;
+
+    background: none;
+    border-bottom: 0.1rem solid #e5e5e5;
+  }
+}
+
+.button {
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.side-menu {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.ember-view.side-menu-toggle {
+  font-weight: normal;
+}
+
+.side--menu-title {
+  color: $secondary;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}

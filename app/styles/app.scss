@@ -1,0 +1,50 @@
+// $c-primary: #241c44;
+// $c-secondary: #d7a55c;
+// $c-white: #d8d4c3;
+// $c-black: #261C1B;
+// $c-gray: #353535;
+// $c-dark-gray: #171717;
+// $c-success: #7da29a;
+// $c-warning: #a33333;
+
+
+$m-gutter: 1rem;
+$m-container: 70rem;
+
+// BULMA
+$family-sans-serif: 'Quicksand';
+$primary: #241c44;
+$secondary: #d7a55c;
+$white: #d8d4c3;
+$black: #261C1B;
+$gray: #353535;
+$dark-gray: #171717;
+$success: #7da29a;
+$warning: #a33333;
+
+$body-background: $white;
+
+@import "bulma";
+@import "reset";
+@import "ember-power-select";
+@import "main";
+@import "ember-side-menu";
+@import "sidebar";
+@import "footer";
+
+
+.ember-view.side-menu-toggle.left {
+  padding: 1rem;
+}
+
+.ember-power-select-dropdown {
+  z-index: 1989;
+}
+
+@import "profile";
+@import "login";
+@import "signup";
+@import "etch";
+@import "map";
+@import "memories";
+@import "friends";

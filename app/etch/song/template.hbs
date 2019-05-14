@@ -1,0 +1,56 @@
+{{outlet}}
+
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">{{emoji-character "notes"}}Let's etch a memory!{{emoji-character "notes"}}</p>
+    </header>
+
+    <section class="modal-card-body">
+
+      {{#simple-form class="container" onsubmit=(action "saveMemory" spotifyTrack) as |formValues|}}
+        <h1>Search artist or song</h1>
+
+        {{#power-select
+          search=(action "searchSong")
+          selected=spotifyTrack
+          onchange=(action (mut spotifyTrack))
+          as |track|}}
+          {{#each track.artists as |artist|}}
+            {{artist.name}}
+          {{/each}} -
+          {{track.name}}
+        {{/power-select}}
+
+        <div id="results"></div>
+
+          <label class="label">Pick an emoji</label>
+          <p class="control">
+
+            {{#each emotions as |emotion|}}
+              <button {{action (action (mut formValues.emoji) emotion)}}>{{emoji-character emotion class="icon"}}</button>
+            {{/each}}
+
+          </p>
+          <label class="label">Write it out!</label>
+          <p class="control">
+            {{textarea class="textarea" placeholder="Feelings..." value=formValues.text}}
+          </p>
+
+        <footer class="modal-card-foot">
+          <p class="control">
+
+            <button class="button is-warning">Submit</button>
+            <button class="button is-warning">Cancel</button>
+          </p>
+        </footer>
+
+        {{#link-to "etch"}}
+        <button class="modal-close"></button>
+        {{/link-to}}
+      {{/simple-form}}
+
+    </section>
+  </div>
+</div>

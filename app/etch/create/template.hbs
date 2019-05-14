@@ -1,0 +1,35 @@
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Let's log some emotions!</p>
+    </header>
+    <div class="modal-content">
+      <section class="modal-card-body">
+        <label class="label">1. Pick an emoji</label>
+        <p class="control">
+
+          {{#each emotions as |emotion|}}
+            <button>{{emoji-character emotion class="icon"}}</button>
+          {{/each}}
+
+        </p>
+        <label class="label">2. Write it out!</label>
+        <p class="control">
+          <textarea class="textarea" placeholder="Feelings..."></textarea>
+        </p>
+      </section>
+      <footer class="modal-card-foot">
+        <p class="control">
+          <button class="button is-warning">Submit</button>
+          <button class="button is-warning">Cancel</button>
+        </p>
+      </footer>
+    </div>
+
+    {{#link-to "etch"}}
+    <button class="modal-close"></button>
+    {{/link-to}}
+
+  </div>
+</div>

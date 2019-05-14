@@ -1,0 +1,7 @@
+{{outlet}}
+
+<ul class="etch-memories">
+  {{#each (sort-by "createdAt:desc" model.memories) as |memory|}}
+    {{memory-item memory=memory}}
+  {{/each}}
+</ul>

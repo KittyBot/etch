@@ -1,0 +1,43 @@
+.record {
+  position: relative;
+  display: block;
+  max-width: 8rem;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.etch-memories {
+  padding: 2rem 0;
+  width: 0.5rem;
+  background: $gray;
+  height: 40rem;
+  margin: auto;
+
+  &__item {
+    position: relative;
+    transform: translateX(-50%);
+    width: 18rem;
+  }
+
+  > * + * {
+    margin-top: 2rem;
+  }
+
+  &__pic {
+    position: relative;
+
+
+  }
+
+  &__item-content {
+    // position: absolute;
+
+    top: 0;
+    left: 100%;
+    margin-left: 1rem;
+  }
+
+  // p:nth-of-type(even) {
+  // }
+}

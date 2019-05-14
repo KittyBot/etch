@@ -1,0 +1,18 @@
+.etch-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  margin-top: 6rem;
+}
+
+.etch-info {
+  color: $primary;
+  // margin: 0 auto;
+  // padding: 2rem;
+}
+
+.record-song {
+  position: fixed;
+  max-width: 25rem;
+}

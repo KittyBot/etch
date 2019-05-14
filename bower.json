@@ -2,6 +2,11 @@
   "name": "final-project-etch",
   "dependencies": {
     "ember": "~2.9.0",
-    "ember-cli-shims": "0.1.3"
+    "ember-cli-shims": "~0.1.1",
+    "font-awesome": "~4.5.0",
+    "bulma": "0.1.2",
+    "emojione": "^2.2.6",
+    "leaflet": "^1.0.0",
+    "blueimp-md5": "2.1.0"
   }
 }

@@ -1,0 +1,31 @@
+{{outlet}}
+<div class="box-signup">
+  {{#simple-form onsubmit=(action "saveUser") class="wrap-signup" as |formValues|}}
+    <p class="control has-icon">
+      {{input class="input" type="name" placeholder="Name" value=formValues.name}}
+      <i class="fa fa-pencil"></i>
+    </p>
+    <p class="control has-icon">
+      {{input class="input" type="username" placeholder="Username" value=formValues.username}}
+      <i class="fa fa-user"></i>
+    </p>
+    <p class="control has-icon">
+      {{input class="input" type="email" placeholder="Email" value=formValues.email}}
+      <i class="fa fa-envelope"></i>
+    </p>
+    <p class="control has-icon">
+      {{input class="input" type="password" placeholder="Create Password" value=formValues.password}}
+      <i class="fa fa-lock"></i>
+    </p>
+    <p class="control has-icon">
+      {{input class="input" type="password" placeholder="Confirm Password" value=formValues.passwordConfirmation}}
+      <i class="fa fa-lock"></i>
+    </p>
+
+
+    <p class="control">
+      <button class="button is-warning">Submit</button>
+      <button type="button" class="button is-warning">Cancel</button>
+    </p>
+  {{/simple-form}}
+</div>

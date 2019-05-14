@@ -1,0 +1,46 @@
+{{outlet}}
+
+<div class="profile-container">
+
+  <div class="profile">
+    <div class="record">
+      <img class="record__pic" src="{{model.fullProfilePicUrl}}"/>
+      <img class="image" src="your-image.png">
+    </div>
+  </div>
+  <div class="info content">
+    <h1>@{{model.username}}</h1>
+    {{!-- <h2>Nashville, TN.</h2>
+    <h2>http://kittybotblog.io</h2> --}}
+    <button type="button" class="form__btn"{{action "choosePic" currentUser.user}}>Upload Profile Pic</button>
+  </div>
+
+</div>
+
+<div class="memories">
+
+  <div class="memory">
+    <div class="record record--with-center">
+      <img class="record__pic" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png"/>
+    </div>
+  </div>
+
+  <div class="memory">
+    <div class="record record--with-center">
+      <img class="record__pic" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png"/>
+    </div>
+  </div>
+
+  <div class="memory">
+    <div class="record record--with-center">
+      <img class="record__pic" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png"/>
+    </div>
+  </div>
+
+  <div class="memory">
+    <div class="record record--with-center">
+      <img class="record__pic" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png"/>
+    </div>
+  </div>
+
+</div>

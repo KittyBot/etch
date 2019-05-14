@@ -1,0 +1,88 @@
+.element {
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.record {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  // margin: 10rem auto;
+
+  border-radius: 50%;
+  max-width: 30rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px #888888;
+
+  transition: transform 1s;
+
+  &:hover {
+    animation: pulse 5s infinite linear;
+  }
+
+  &--with-center::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: $white;
+    border-radius: 50%;
+    border: rgba($black, 1) solid 1.4rem;
+
+    z-index: 1;
+    box-shadow: inset 0.2rem 0.2rem 0.4rem rgba($black, 0.4);
+
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  &__pic {
+    border-radius: 50%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.profile-container {
+  display: flex;
+}
+
+.profile {
+  flex: 1 500px;
+}
+
+.info {
+  color: $primary;
+  font-size: 1rem;
+  // margin: 0 auto;
+  text-align: right;
+  padding: 3rem;
+}
+
+.form__btn {
+  border-radius: 10%;
+  // height: 2rem;
+  color: white;
+  background: $warning;
+  border-color: transparent;
+
+}

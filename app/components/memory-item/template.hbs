@@ -1,0 +1,21 @@
+<li class="etch-memories__item">
+
+  <img class="record" src="{{album.url}}"/>
+
+
+    <div class="etch-memories__item-content">
+          <div class="content">
+            <strong class="">
+              {{#each track.artists as |artist|}}
+                {{artist.name}}
+              {{/each}}
+            </strong>
+
+            <large>{{track.name}}</large>
+            <strong>{{moment-from-now memory.createdAt "YYYY-MM-DD HH:mm:ss"}}</strong>
+            <br>
+            {{emoji-character memory.emoji}} {{memory.text}}
+          </div>
+    </div>
+
+</li>

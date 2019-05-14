@@ -1,0 +1,122 @@
+{{ currentUser.user.email }}
+<nav class="nav">
+  <div class="nav-left">
+    <div class="nav-item">
+      {{#side-menu-toggle}}
+      <span class="fa fa-bars"></span>
+      {{/side-menu-toggle}}
+    </div>
+
+    <h1 class="nav-item is-brand">
+      Etch
+    </h1>
+  </div>
+
+  <div class="nav-right nav-menu">
+
+    <span class="nav-item">
+      {{#link-to "login" class="button is-success"}}
+      Login
+      {{/link-to}}
+
+      {{#link-to "signup"}}
+      <a class="button is-success">Signup</a>
+      {{/link-to}}
+
+      <a href="https://twitter.com/EtchMemories" class="button">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+        <span>Tweet</span>
+      </a>
+
+    </span>
+  </div>
+
+</nav>
+
+{{#side-menu width="20%"}}
+  <ul class="side-menu-nav">
+    <p class="side--menu-title">Etch</p>
+    <li>
+      {{#side-menu-link-to "etch"}}
+        Etch A Memory!
+      {{/side-menu-link-to}}
+    </li>
+    {{#if currentUser.user}}
+      <li>
+        {{#side-menu-link-to "admin.profile"}}
+          My Profile
+        {{/side-menu-link-to}}
+      </li>
+      <li>
+        {{#side-menu-link-to "admin.friends.memories" currentUser.user}}
+          My Memories
+        {{/side-menu-link-to}}
+      </li>
+      <li>
+        {{#side-menu-link-to "admin.friends"}}
+          My Friends
+        {{/side-menu-link-to}}
+      </li>
+    {{/if}}
+    <li>
+      {{#side-menu-link-to "popular"}}
+        Most Popular
+      {{/side-menu-link-to}}
+    </li>
+    <li>
+      {{#side-menu-link-to "map"}}
+        Memory Map
+      {{/side-menu-link-to}}
+    </li>
+    <li class="side-menu-nav__divider"></li>
+    <li class="logout">
+      {{#side-menu-link-to "index"}}
+        Logout
+      {{/side-menu-link-to}}
+    </li>
+  </ul>
+
+
+  {{!-- <aside class="menu">
+  <p class="menu-label">
+    Etch
+  </p>
+  <ul class="menu-list">
+    <li>
+      {{#side-menu-link-to "index"}}
+      My Memories
+      {{/side-menu-link-to}}
+    </li>
+    <li>
+      {{#side-menu-link-to "index"}}
+      My Friends
+      {{/side-menu-link-to}}
+    </li>
+    <li>
+      {{#side-menu-link-to "index"}}
+      Etch A Song
+      {{/side-menu-link-to}}
+    </li>
+    <li class="side-menu-nav__divider"></li>
+    <li class="logout">
+      {{#side-menu-link-to "index"}}
+        Logout
+      {{/side-menu-link-to}}
+    </li>
+  </ul>
+</aside> --}}
+{{/side-menu}}
+{{content-backdrop}}
+<div class="page-content">
+  <main>
+    <div class="container">
+
+      {{outlet}}
+
+    </div>
+  </main>
+
+  {{outlet "footer"}}
+</div>

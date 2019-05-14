@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Etch</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto');
+  </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Etch</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/final-project-etch.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/final-project-etch.css"> {{content-for "head-footer"}}
+</head>
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+<body>
+  {{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/final-project-etch.js"></script>
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/final-project-etch.js"></script>
 
-    {{content-for "body-footer"}}
-  </body>
+
+  {{content-for "body-footer"}}
+</body>
+
+<footer class="site--footer">
+  <div class="container">
+    <div class="content has-text-centered">
+
+      <p>
+        <strong>Etch</strong> by
+        <a href="https://github.com/cmcneese">Chris</a> &amp;
+        <a href="https://github.com/KittyBot">Christina</a>
+      </p>
+
+    </div>
+  </div>
+</footer>
+
 </html>

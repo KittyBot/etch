@@ -1,0 +1,8 @@
+{{!-- {{outlet}}
+
+<h1>A map goes here</h1> --}}
+
+<p>Latitude: <code>{{lat}}</code> / Longitude: <code>{{lng}}</code></p>
+{{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom onMoveend=(action "updateCenter")}}
+  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+{{/leaflet-map}}
